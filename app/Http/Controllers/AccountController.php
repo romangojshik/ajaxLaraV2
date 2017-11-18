@@ -14,6 +14,6 @@ class AccountController
 {
     public function index()
     {
-        echo "Welcome";
+        return view('account.index');
     }
 }
