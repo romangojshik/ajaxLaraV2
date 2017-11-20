@@ -5,14 +5,19 @@
         <meta charset="utf-8">
         <meta name="csrf-token" content="{!! csrf_token() !!}" />
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <script src="https://code.jquery.com/jquery-3.2.1.js"
-                integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
-                crossorigin="anonymous">
-        </script>
+
+        {{--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">--}}
+        {{--<link rel="stylesheet" href="{{ asset('css/custom.css') }}">--}}
+
+        {{--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>--}}
+
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
         <link rel="stylesheet" href="{{ asset('css/custom.css') }}">
 
-        {{--<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>--}}
+
     </head>
     <body>
         @include('nav')
@@ -110,7 +115,7 @@
                                 '<button class="btn btn-danger btn-delete" data-id="' + data.id + '"><i class="glyphicon glyphicon-trash"></i> Delete</button></td>' +
                                 '</tr>';
 
-                            if(state === 'save') {
+                            if(state == 'save') {
                                 $('tbody').append(row);
                             } else {
                                 $('#customer' + data.id).replaceWith(row);
@@ -183,7 +188,11 @@
 
             </script>
         </div>
+        <!-- Bootstrap core JavaScript
+    ================================================== -->
+        <!-- Placed at the end of the document so the pages load faster -->
 
+        {{--<script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>--}}
     </body>
 
 </html>
